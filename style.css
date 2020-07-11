@@ -1,68 +1,74 @@
-
+/* @keyframes example{
+    from {background-color: red;}
+  to {background-color: yellow;}
+} */
+body{
+    background-image: linear-gradient(to right,rgb(207, 102, 40),rgb(75, 163, 57),rgb(192, 128, 10));
+}
+.container{
+    margin-top: 3rem;
+    background-image: linear-gradient(to right,black,rgb(12, 12, 24),black);
+    border: 3px 4px 3px 5px white;
+}
 
 img.source-image {
     width: 100%;
     height:100%;
     position:absolute ;
+    opacity: 0.5;
+}
+
+.box{
     
-  }
-#p1 {
-    color: thistle;
+margin: auto;
+
+/* background-color: rgb(165, 20, 20); */
+align-items: center;
+justify-content: center;
 }
-#p2 {
-    color: thistle;
-}
 
-/* #btn1{
-    margin-left: 0%;
-
-} */
-
-#ng{
-
+#new-game{
+  margin-bottom: -15rem;
     margin-left: 45%;
-}
-/* 
-#btn2{
-    margin-left: 0%;
-
-} */
-
-#dice-image1{
-    margin-left: 30%;
-    cursor: pointer;
-}
-#dice-image2{
-    margin-left: 30%;
-    cursor: pointer;
 }
 
 .flex-box{
-    flex-wrap: wrap;
     text-align: center;
-    margin-top: 50px;
+    height: auto;
+    /* background-color: blue; */
+    flex-direction: row;
 }
 
-.fb{
-    flex-wrap: wrap;
-    height: 325px;
-    text-align: center;
-    margin-top: 50px;
-    
-}
+
 
 .jumbotron{
+    position: absolute;
+    left: 30%;
+    top:100%;
     text-align: center;
+    animation-name: example;
+    animation-duration: 4s;
 }
 
-.flex-box-1{
-
-  background-color: wheat;
-    
+#header{
+    padding: 3rem;
+    color: rgb(250, 246, 246);
 }
 
-.flex-box-2{
-
-    background-color: turquoise;
+#dice-image1 {
+    padding: 0 3rem 3rem 3rem;
+    left: 4rem;
+    /* background-color: #050505; */
 }
 
+#dice-image2 {
+    padding: 0 3rem 3rem 3rem;
+    left: 4rem;
+    /* background-color: #050505; */
+}
+
+#score-card{
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+}
