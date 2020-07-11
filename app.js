@@ -3,13 +3,13 @@ let total1 = 0;
 let total2 = 0;
 
 document.getElementById('ng').style.display = "none";
+document.querySelector('.player1-turn').style.display = "block";
+document.querySelector('.player2-turn').style.display = "block";
 
 
-document.querySelector('.player1-turn').style.display = "none";
-document.querySelector('.player2-turn').style.display = "none";
-
-
-document.querySelector('.btn1').addEventListener('click',()=>{
+document.querySelector('#dice-image1').addEventListener('click',()=>{
+    document.querySelector('#dice-image1').style.display = "none";
+    document.querySelector('#dice-image2').style.display = "block";
 
     document.querySelector('.player1-turn').style.display = "block";
     dice1=Math.floor(Math.random() * 6 +1) ;
@@ -24,8 +24,8 @@ document.querySelector('.btn1').addEventListener('click',()=>{
         document.getElementById('ng').style.display = "block";
         document.querySelector('.current-score-player1').textContent = dice1;
         document.querySelector('.total-score-player1').textContent = total1;
-        document.querySelector('#btn1').style.display = "none";
-        document.querySelector('#btn2').style.display = "none";
+        // document.querySelector('#dice-image1').style.display = "none";
+        // document.querySelector('#dice-image2').style.display = "none";
         return;
     }
     else{
@@ -33,8 +33,9 @@ document.querySelector('.btn1').addEventListener('click',()=>{
     }
 })
 
-document.querySelector('.btn2').addEventListener('click',()=>{
-
+document.querySelector('#dice-image2').addEventListener('click',()=>{
+    document.querySelector('#dice-image2').style.display = "none";
+    document.querySelector('#dice-image1').style.display = "block";
     document.querySelector('.player2-turn').style.display = "block";
     dice2=Math.floor(Math.random() * 6 +1) ;
     if(dice2===1)
@@ -47,8 +48,8 @@ document.querySelector('.btn2').addEventListener('click',()=>{
         document.getElementById('dice-image2').src = "win.jpg";
         document.getElementById('dice-image1').src = "lose.jpg";
         document.getElementById('ng').style.display = "block";
-        document.querySelector('#btn2').style.display = "none";
-        document.querySelector('#btn1').style.display = "none";
+        // document.querySelector('#dice-image2').style.display = "none";
+        // document.querySelector('#dice-image1').style.display = "none";
         return;
     }
     else 
